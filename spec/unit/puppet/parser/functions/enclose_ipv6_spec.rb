@@ -3,7 +3,8 @@
 require 'spec_helper'
 
 describe 'the enclose_ipv6 function' do
-  let(:scope) { PuppetlabsSpec::PuppetInternals.scope }
+  scope = RSpec::ExampleGroups::TheEncloseIpv6Function.scope
+  # let(:scope) { RSpec::ExampleGroups::TheEncloseIpv6Function.scope }
 
   it 'exists' do
     expect(Puppet::Parser::Functions.function('enclose_ipv6')).to eq('function_enclose_ipv6')
